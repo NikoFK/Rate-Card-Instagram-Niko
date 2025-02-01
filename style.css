@@ -1,0 +1,483 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 0px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header #mode-toggle {
+    background: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.2) blur(2px);
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#hero .subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#hero .info {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#hero .cta-button {
+    background: white;
+    color: #2575fc;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+
+/* Paket Konten Section */
+#paket-konten {
+    padding: 60px 0;
+}
+
+#paket-konten h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.paket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.paket-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.paket-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2575fc;
+}
+
+.paket-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.paket-card ul li {
+    margin-bottom: 15px;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.widget-header .arrow {
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+.widget-content {
+    display: none;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.widget-content p {
+    margin: 5px 0;
+}
+
+/* Ketentuan Tambahan Section */
+#ketentuan-tambahan {
+    padding: 60px 0;
+    background: #f1f1f1;
+}
+
+#ketentuan-tambahan h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.ketentuan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.ketentuan-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ketentuan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ketentuan-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2575fc;
+}
+
+.ketentuan-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Kontak Section */
+#kontak {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#kontak h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#kontak p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#kontak .cta-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2575fc;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Dark Mode */
+body.dark-mode .paket-card,
+body.dark-mode .ketentuan-card {
+    background: #2a2a2a;
+    color: #f9f9f9;
+}
+
+body.dark-mode .paket-card h3,
+body.dark-mode .ketentuan-card h3,
+body.dark-mode a,
+body.dark-mode .cta-text {
+    color: #4fa3ff;
+}
+
+body.dark-mode .paket-card ul li .description,
+body.dark-mode .ketentuan-card p {
+    color: #ccc;
+}
+
+body.dark-mode #ketentuan-tambahan,
+body.dark-mode .table-perbedaan thead {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode .table-perbedaan tbody tr:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #mode-toggle {
+    background: #4fa3ff;
+    color: #fff;
+}
+
+body.dark-mode #hero {
+    background-color: #000;
+}
+
+body.dark-mode #hero .container {
+    color: white;
+
+}
+body.dark-mode #perbedaan-paket {
+    background: #2a2a2a;
+    color: #f9f9f9;
+}
+
+body.dark-mode #ketentuan-tambahan,
+body.dark-mode .table-perbedaan thead,
+body.dark-mode #perbedaan-paket {
+    background: #222;
+    color: white;
+}
+#perbedaan-paket {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+}
+
+#perbedaan-paket h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#perbedaan-paket p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.table-perbedaan {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-perbedaan thead {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-perbedaan th, .table-perbedaan td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-perbedaan th {
+    font-weight: bold;
+}
+
+.table-perbedaan tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-perbedaan tbody tr:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-perbedaan tbody tr:active {
+    background-color: #2575fc;
+    color: #fff;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-perbedaan tbody tr:not(:hover) {
+    filter: blur(0.3px);
+    -webkit-filter: blur(0.3px);
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.2) blur(2px);
+}
+
+#hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#hero .subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;}
+
+/* Proses Kerja Sama Section */
+#proses-kerjasama {
+    padding: 60px 0;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+body.dark-mode #proses-kerjasama {
+    background: #222;
+    color: white;
+}
+
+#proses-kerjasama h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.proses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.proses-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .proses-card {
+    background: #2a2a2a;
+    color: #f9f9f9;
+}
+
+.proses-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.proses-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2575fc;
+}
+
+.proses-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+body.dark-mode .proses-card p {
+    color: #ccc;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
